@@ -1,0 +1,222 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 222.2 84% 4.9%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
+
+    --primary: 270 50% 40%; /* Lightened */
+    --primary-foreground: 210 40% 98%;
+
+    --secondary: 270 30% 86.1%; /* Lightened */
+    --secondary-foreground: 222.2 47.4% 11.2%;
+
+    --muted: 270 30% 86.1%; /* Lightened */
+    --muted-foreground: 215.4 16.3% 46.9%;
+
+    --accent: 270 30% 86.1%; /* Lightened */
+    --accent-foreground: 222.2 47.4% 11.2%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 270 50% 40%; /* Lightened */
+
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 270 50% 50%; /* Lightened */
+    --primary-foreground: 210 40% 98%;
+
+    --secondary: 270 30% 27.5%; /* Lightened */
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 270 30% 27.5%; /* Lightened */
+    --muted-foreground: 215 20.2% 65.1%;
+
+    --accent: 270 30% 27.5%; /* Lightened */
+    --accent-foreground: 210 40% 98%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 270 30% 27.5%; /* Lightened */
+    --input: 270 30% 27.5%; /* Lightened */
+    --ring: 270 50% 50%; /* Lightened */
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+/* Enhanced styles */
+.gradient-bg {
+  background: linear-gradient(135deg, hsl(270, 50%, 40%), hsl(280, 50%, 30%)); /* Lightened */
+  position: relative;
+  overflow: hidden;
+}
+
+.gradient-bg::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0) 80%);
+  animation: pulse 15s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.5;
+    transform: scale(0.9);
+  }
+}
+
+.glow {
+  text-shadow: 0 0 10px rgba(147, 112, 219, 0.8), 0 0 20px rgba(147, 112, 219, 0.5), 0 0 30px rgba(147, 112, 219, 0.3);
+}
+
+.card-hover {
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.card-hover:hover {
+  transform: translateY(-5px) rotate3d(1, 1, 0, 5deg);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1), 0 6px 6px rgba(0, 0, 0, 0.1);
+}
+
+@keyframes float {
+  0% { transform: translateY(0px) rotate3d(0, 1, 0, 0deg); }
+  50% { transform: translateY(-10px) rotate3d(0, 1, 0, 180deg); }
+  100% { transform: translateY(0px) rotate3d(0, 1, 0, 360deg); }
+}
+
+.float-animation {
+  animation: float 5s ease-in-out infinite;
+}
+
+.ar-button {
+  background-color: white;
+  border-radius: 4px;
+  border: none;
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  padding: 0.25rem 0.5rem;
+  font-size: 0.875rem;
+  color: hsl(270, 50%, 40%); /* Lightened */
+  font-weight: 500;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
+  transition: all 0.3s ease;
+}
+
+.ar-button:hover {
+  background-color: hsl(270, 50%, 40%); /* Lightened */
+  color: white;
+  transform: scale(1.05);
+}
+
+.animate-pulse {
+  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+/* 3D text effect */
+.text-3d {
+  text-shadow: 0px 1px 0px #7b2dbb, /* Lightened */
+               0px 2px 0px #702aa9, /* Lightened */
+               0px 3px 0px #622497, /* Lightened */
+               0px 4px 0px #541e85, /* Lightened */
+               0px 5px 0px #461873, /* Lightened */
+               0px 6px 0px #381061, /* Lightened */
+               0px 7px 0px #2a0a4f, /* Lightened */
+               0px 8px 7px #1c043d; /* Lightened */
+}
+
+/* Hologram effect */
+.hologram {
+  position: relative;
+  overflow: hidden;
+}
+
+.hologram::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -75%;
+  z-index: 2;
+  display: block;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(to right, rgba(255,255,255,0) 0%, rgba(147, 112, 219, 0.3) 100%);
+  transform: skewX(-25deg);
+  animation: shine 3s infinite;
+}
+
+@keyframes shine {
+  100% {
+    left: 125%;
+  }
+}
+
+/* Globe Container */
+.globe-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 25%;
+  height: 25%;
+  background: radial-gradient(circle, hsl(270, 50%, 50%) 0%, hsl(270, 30%, 20%) 100%);
+  border-radius: 50%;
+  animation: float 5s ease-in-out infinite;
+  box-shadow: 0 0 10px rgba(147, 112, 219, 0.8),
+              0 0 20px rgba(147, 112, 219, 0.6),
+              0 0 30px rgba(147, 112, 219, 0.4);
+}
+
+/* Heart Container */
+.heart-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 30%;
+  height: 30%;
+  transform: translate(-50%, -50%);
+  background: linear-gradient(135deg, hsl(0, 80%, 70%), hsl(0, 70%, 50%));
+  clip-path: path("M150 0 C75 0 75 75 0 75 C0 150 150 300 300 150 C300 75 225 75 150 0 Z");
+  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  box-shadow: 0 0 10px rgba(255, 70, 70, 0.8),
+              0 0 20px rgba(255, 70, 70, 0.6),
+              0 0 30px rgba(255, 70, 70, 0.4);
+}

@@ -1,0 +1,62 @@
+{
+    "topic": "Brain",
+    "questions": [
+      {
+        "id": 1,
+        "question": "What is the largest part of the human brain?",
+        "options": [
+          "Cerebellum",
+          "Cerebrum",
+          "Brain stem",
+          "Hippocampus"
+        ],
+        "correctAnswer": 1
+      },
+      {
+        "id": 2,
+        "question": "Which part of the brain is responsible for maintaining balance and coordination?",
+        "options": [
+          "Cerebrum",
+          "Thalamus",
+          "Cerebellum",
+          "Medulla oblongata"
+        ],
+        "correctAnswer": 2
+      },
+      {
+        "id": 3,
+        "question": "What is the function of the hippocampus?",
+        "options": [
+          "Regulating body temperature",
+          "Processing visual information",
+          "Controlling emotions",
+          "Forming new memories"
+        ],
+        "correctAnswer": 3
+      },
+      {
+        "id": 4,
+        "question": "Which lobe of the cerebrum is primarily responsible for processing auditory information?",
+        "options": [
+          "Frontal lobe",
+          "Parietal lobe",
+          "Temporal lobe",
+          "Occipital lobe"
+        ],
+        "correctAnswer": 2
+      },
+      {
+        "id": 5,
+        "question": "What is the name of the fluid that surrounds and protects the brain?",
+        "options": [
+          "Synovial fluid",
+          "Cerebrospinal fluid",
+          "Plasma",
+          "Lymph"
+        ],
+        "correctAnswer": 1
+      }
+    ]
+  }
+  
+  
