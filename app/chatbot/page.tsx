@@ -91,7 +91,7 @@ const ChatbotPage = () => {
         <div className="h-full flex flex-col">
           <h2 className="text-2xl font-bold p-4 text-white text-center bg-white/20">Chat with Us</h2>
           <iframe
-            src="https://cdn.botpress.cloud/webchat/v2.2/shareable.html?configUrl=https://files.bpcontent.cloud/2024/12/20/13/20241220134110-P1MI1UA0.json"
+            src="add your link here bro"
             className="flex-grow"
             style={{ border: "none" }}
             title="Chatbot"
